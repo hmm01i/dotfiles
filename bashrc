@@ -1,5 +1,7 @@
 #/bin/bash
 
+alias vi="vim"
+
 # gitprompt configuration
 # Set config variables first
 GIT_PROMPT_ONLY_IN_REPO=1
