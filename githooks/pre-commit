@@ -1,0 +1,46 @@
+#!/bin/bash
+# lock the myfeature branch for pushing
+git_root=`git rev-parse --show-toplevel`
+refname=$(git rev-parse --abbrev-ref HEAD)
+
+# space separated list of locked branches
+locked="master default production preproduction"
+
+for b in $locked; do
+  if [[ "$refname" = "$b" ]]
+    then
+      echo "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      echo "You cannot commit to ${refname}. It's locked"
+      echo "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      exit 1
+  fi
+done
+
+# Run checks
+failed=0
+
+for changedfile in `git diff --cached --name-only --diff-filter=ACM`; do
+echo -e "$(tput setaf 6)Checking for trailing whitespace in $changedfile ...$(tput sgr0)"
+grep -n --color=always '\ $' ${git_root}/${changedfile}
+  RC=$?
+  if [ "$RC" -eq 0 ]; then
+    echo -e "$(tput setaf 1)Trailing whitespace found!$(tput sgr0)"
+    failed=`expr $failed + 1`
+    exit 1
+  fi
+done
+
+if [ -e ~/.puppet-git-hooks/pre-commit ]; then
+~/.puppet-git-hooks/pre-commit
+RC=$?
+if [ "$RC" -ne 0 ]; then
+    failed=`expr $failed + 1`
+  fi
+fi
+
+if [ "$failed" -ne 0 ]; then
+    echo -e "$(tput setaf 1)Error: Hooks failed. Aborting commit.$(tput sgr0)"
+    exit 1
+fi
+exit 0
+
