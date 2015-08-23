@@ -1,6 +1,6 @@
 #/bin/bash
 
-read -p "Install bash git prompt (Y/n)" prompt
+read -p "Install bash git prompt (Y/n) " prompt
 echo $prompt
 if [ "$prompt" != "n" ] && [ "$prompt" != "N" ]
 then
@@ -9,10 +9,17 @@ then
   git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt
 fi
 
-read -p "Install puppet git hooks (Y/n)" prompt
+read -p "Install puppet git hooks (Y/n) " prompt
 if [ "$prompt" != "n" ] && [ "$prompt" != "N" ]
 then
   echo "Installing puppet git hooks"
   cd ~
   git clone https://github.com/drwahl/puppet-git-hooks.git .puppet-git-hooks
+fi
+
+read -p "Add custom bashrc. (This does NOT overwrite .bashrc) (Y/n) " prompt
+if [ "$prompt" != "n" ] && [ "$prompt" != "N" ]
+then
+  echo "Sourcing custom bashrc."
+  echo ". ~/customizations/bashr" >> ~/.bashrc
 fi
