@@ -17,9 +17,9 @@ then
   git clone https://github.com/drwahl/puppet-git-hooks.git .puppet-git-hooks
 fi
 
-read -p "Add custom bashrc. (This does NOT overwrite .bashrc) (Y/n) " prompt
+read -p "Source custom bashrc. (This does NOT overwrite .bashrc) (Y/n) " prompt
 if [ "$prompt" != "n" ] && [ "$prompt" != "N" ]
 then
   echo "Sourcing custom bashrc."
-  echo ". ~/customizations/bashr" >> ~/.bashrc
+  echo ". ~/customizations/customrc" >> ~/.bashrc
 fi
