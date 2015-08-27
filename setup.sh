@@ -23,3 +23,12 @@ then
   echo "Sourcing custom bashrc."
   echo ". ~/customizations/customrc" >> ~/.bashrc
 fi
+
+read -p "Create git-template (Y/n) " prompt
+echo $prompt
+if [ "$prompt" != "n" ] && [ "$prompt" != "N" ]
+then
+	cd ~
+	mkdir .git-template
+	cp ~/customizations/githooks ~/.git-template/
+fi
