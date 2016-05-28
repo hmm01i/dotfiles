@@ -3,7 +3,7 @@
 #FIXME: this doesn't work if unless executed in repo...
 # so either fix that or check if we're in the repo
 
-_git-root=$(git rev-parse --show-toplevel)
+_gitroot=$(git rev-parse --show-toplevel)
 read -p "Install bash git prompt (Y/n) " prompt
 echo $prompt
 if [ "$prompt" != "n" ] && [ "$prompt" != "N" ]
@@ -33,6 +33,6 @@ echo $prompt
 if [ "$prompt" != "n" ] && [ "$prompt" != "N" ]
 then
 	cd ~
-	mkdir .git-template
-	cp ${_git-root}/githooks ~/.git-template/
+	test -d .git-template || mkdir .git-template
+	cp -r "${_gitroot}/githooks" ~/.git-template/
 fi
