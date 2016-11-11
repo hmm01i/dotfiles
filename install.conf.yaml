@@ -6,3 +6,4 @@
                 force: true
                 path: vim
         ~/.pythonrc.py: pythonrc.py
+        ~/.puppet-git-hooks: puppet-git-hooks
