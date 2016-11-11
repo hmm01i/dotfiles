@@ -2,7 +2,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-let vimDir = $HOME/.vim
+let vimDir = '$HOME/.vim'
 " " Keep undo history across sessions by storing it in a file
 if has('persistent_undo')
    let myUndoDir = '/tmp/undodir'
