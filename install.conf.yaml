@@ -1,3 +1,8 @@
 - link:
         ~/.gitconfig: gitconfig
         ~/.git-template: git-template
+        ~/.vimrc: vimrc
+        ~/.vim:
+                force: true
+                path: vim
+        ~/.pythonrc.py: pythonrc.py
