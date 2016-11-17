@@ -7,3 +7,4 @@
                 path: vim
         ~/.pythonrc.py: pythonrc.py
         ~/.puppet-git-hooks: puppet-git-hooks
+        ~/.gnupg/gpg-agent.conf: gpg-agent.conf
