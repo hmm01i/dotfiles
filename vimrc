@@ -1,6 +1,8 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+set background=dark
+colorscheme solarized
 
 let vimDir = '$HOME/.vim'
 " " Keep undo history across sessions by storing it in a file
