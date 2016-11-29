@@ -32,4 +32,3 @@ set splitbelow
 " Line numbers
 set number
 set relativenumber
-
