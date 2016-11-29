@@ -13,3 +13,6 @@ if has('persistent_undo')
    let &undodir = myUndoDir
    set undofile
 endif
+
+set number
+set relativenumber
