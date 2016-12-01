@@ -32,3 +32,12 @@ set splitbelow
 " Line numbers
 set number
 set relativenumber
+
+" Remap window switching
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+
+" Quick disable highlighting
+nnoremap <C-L> :nohl<CR><C-L>
