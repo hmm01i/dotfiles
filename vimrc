@@ -40,4 +40,6 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
 " Quick disable highlighting
-nnoremap <C-L> :nohl<CR><C-L>
+nnoremap <C--> :nohl<CR>
+
+noremap <C-N> :NERDTreeFind<CR>
