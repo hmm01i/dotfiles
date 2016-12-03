@@ -41,3 +41,6 @@ nnoremap <C-L> <C-W>l
 
 " Quick disable highlighting
 nnoremap <C-L> :nohl<CR><C-L>
+
+" Quick close file
+map <C-Q> :q<CR>
