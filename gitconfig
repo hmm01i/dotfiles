@@ -27,5 +27,7 @@
 	dc = diff --cached
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
         hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+[gpg]
+	program = gpg2
 [include]
         path = .gitconfig.user
