@@ -4,6 +4,12 @@ filetype plugin indent on
 set background=dark
 colorscheme solarized
 
+" Tabbing
+set tabstop=8
+set softtabstop=0
+set expandtab
+set shiftwidth=2
+
 " Undo history
 let vimDir = '$HOME/.vim'
 " " Keep undo history across sessions by storing it in a file
@@ -15,11 +21,12 @@ if has('persistent_undo')
    set undofile
 endif
 
-" Syntatics
+" Status line w/ Syntastics
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" Syntatics
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
