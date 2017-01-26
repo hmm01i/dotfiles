@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ "$(type gpg-agent; echo $?)" = "0" ]; then
+if [ $(type gpg-agent 2>&1 > /dev/null; echo $?) -eq  0 ]; then
     ps -C gpg-agent > /dev/null
     RTN=$(echo $?)
     if [[ $RTN -ne 0 ]]; then
