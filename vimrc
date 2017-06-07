@@ -50,3 +50,9 @@ nnoremap <C-L> <C-W>l
 nnoremap <C-=> :nohl<CR>
 
 noremap <C-N> :NERDTreeFind<CR>
+
+" UtiSnip
+let g:UtilSnipsExpandTrigger="tab"
+let g:UtilSnipsListSnippets="<c-`>"
+let g:UtilSnipEditSplit="veritcal"
+
