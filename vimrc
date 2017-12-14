@@ -6,7 +6,7 @@ colorscheme solarized
 
 " Tabbing
 set tabstop=8
-set softtabstop=0
+set softtabstop=2
 set expandtab
 set shiftwidth=2
 
