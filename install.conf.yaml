@@ -10,3 +10,4 @@
         ~/.gnupg/gpg-agent.conf: gpg-agent.conf
         ~/.oh-my-zsh: oh-my-zsh
         ~/.zshrc: zshrc
+        ~/.ansible.cfg: ansible.cfg
