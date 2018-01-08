@@ -8,7 +8,7 @@ resources=['brushes','patterns','gradients']
 
 _GIMP_VER='2.8'
 _GIMP_HOME='/usr/share/gimp/2.0/'
-_GIMP_USER_DIR="{}/gimp-{}/".format(os.environ['HOME'],_GIMP_VER)
+_GIMP_USER_DIR="{}/.gimp-{}/".format(os.environ['HOME'],_GIMP_VER)
 
 print(_GIMP_USER_DIR)
 
