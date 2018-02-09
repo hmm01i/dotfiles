@@ -1,4 +1,4 @@
 if [ -z $TMUX ];
   then
-    tmux attach || tmux
+    tmux new -t default || tmux new -s default
 fi
