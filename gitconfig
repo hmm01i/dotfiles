@@ -1,7 +1,7 @@
 [init]
         templatedir = ~/.git-template
 [push]
-	default = matching
+	default = simple
 [core]
 	trustctime = false
 	editor = vim
