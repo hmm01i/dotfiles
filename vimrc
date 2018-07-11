@@ -1,14 +1,14 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
-set background=dark
+set background=light
 colorscheme solarized
 
 " Tabbing
-set tabstop=8
-set softtabstop=2
-set expandtab
-set shiftwidth=2
+"set tabstop=8
+"set softtabstop=2
+"set expandtab
+"set shiftwidth=2
 
 " Undo history
 let vimDir = '$HOME/.vim'
@@ -52,7 +52,6 @@ nnoremap <C-=> :nohl<CR>
 noremap <C-N> :NERDTreeFind<CR>
 
 " UtiSnip
-let g:UtilSnipsExpandTrigger="tab"
-let g:UtilSnipsListSnippets="<c-`>"
-let g:UtilSnipEditSplit="veritcal"
+let g:UtilSnipsExpandTrigger = "<c-`>"
+let g:UtilSnipsEditSplit = "veritcal"
 
