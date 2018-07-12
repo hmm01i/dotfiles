@@ -52,6 +52,9 @@ nnoremap <C-=> :nohl<CR>
 noremap <C-N> :NERDTreeFind<CR>
 
 " UtiSnip
-let g:UtilSnipsExpandTrigger = "<c-`>"
-let g:UtilSnipsEditSplit = "veritcal"
+let g:UltiSnipsExpandTrigger = "<C-I>"
+let g:UltiSnipsEditSplit = "vertical"
 
+" YouCompleteMe
+let g:ycm_key_list_select_completion = ['<Down>', '<c-k>', '<C-p>']
+let g:ycm_key_list_previous_completion = ['<Up>', '<c-j>', '<C-n>']
