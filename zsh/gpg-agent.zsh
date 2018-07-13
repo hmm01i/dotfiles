@@ -1,9 +1,9 @@
 #!/bin/sh
 
 if [ $(type gpg-agent 2>&1 > /dev/null; echo $?) -eq  0 ]; then
-    ps -C gpg-agent > /dev/null
+	PROCS=$(ps -A | grep -v grep | grep gpg-agent| wc -l)
     RTN=$(echo $?)
-    if [[ $RTN -ne 0 ]]; then
+    if [[ $PROCS -eq 0 ]]; then
       eval $(gpg-agent --debug-level advanced --daemon --enable-ssh-support --write-env-file "${HOME}/.gpg-agent-info" --log-file "${HOME}/.gnupg/log/gpg-agent.log")
     fi
 
