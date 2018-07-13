@@ -44,3 +44,4 @@ nnoremap <C-L> <C-W>l
 nnoremap <C-=> :nohl<CR>
 
 noremap <C-N> :NERDTreeFind<CR>
+
