@@ -52,3 +52,29 @@ let g:UltiSnipsSnippetDirectories      = ['~/.vim/UltiSnips', 'UltiSnips']
 
 let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+
+
+" Backspace behaviour in vim
+" to make it work like "other" programs
+"
+"set backspace=indent,eol,start
+"
+
+"Longer answer
+"
+"Though the default behaviour may be surprising, the backspace "not working"
+"can be considered a feature; it can prevents you from accidentally removing
+"indentation, and from removing too much text by restricting it to the current
+"line and/or the start of the insert.
+"
+":help 'backspace' tells us:
+"
+"Influences the working of `<BS>`, `<Del>`, `CTRL-W` and `CTRL-U` in Insert
+"mode.  This is a list of items, separated by commas.  Each item allows
+"a way to backspace over something:
+"
+"value     effect
+"indent    allow backspacing over autoindent
+"eol       allow backspacing over line breaks (join lines)
+"start     allow backspacing over the start of insert; CTRL-W and CTRL-U
+"          stop once at the start of insert.
