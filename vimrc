@@ -1,3 +1,8 @@
+" work around to eliminate depracation warning
+if has('python3')
+	  silent! python3 1
+endif
+
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -14,23 +19,12 @@ colorscheme solarized
 let vimDir = '$HOME/.vim'
 " " Keep undo history across sessions by storing it in a file
 if has('persistent_undo')
-   let myUndoDir = '/tmp/undodir'
+   let myUndoDir = '/tmp/$USER/undodir'
   " Create dirs
    call system('mkdir ' . myUndoDir)
    let &undodir = myUndoDir
    set undofile
 endif
-
-" Status line w/ Syntastics
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-" Syntatics
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 " New split to right and below
 set splitright
@@ -51,10 +45,3 @@ nnoremap <C-=> :nohl<CR>
 
 noremap <C-N> :NERDTreeFind<CR>
 
-" UtiSnip
-let g:UltiSnipsExpandTrigger = "<C-I>"
-let g:UltiSnipsEditSplit = "vertical"
-
-" YouCompleteMe
-let g:ycm_key_list_select_completion = ['<Down>', '<c-k>', '<C-p>']
-let g:ycm_key_list_previous_completion = ['<Up>', '<c-j>', '<C-n>']
