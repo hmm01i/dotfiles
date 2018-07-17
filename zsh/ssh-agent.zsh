@@ -5,7 +5,8 @@ if [[ -f ~/.ssh/ssh-agent.env ]]; then
     if ! ps -p $SSH_AGENT_PID > /dev/null; then
       echo "ssh-agent seems to be dead... starting new agent"
       ssh-agent -s > ~/.ssh/ssh-agent.env
-      . ~/.ssh/ssh-agent.env
+      . ~/.ssh/ssh-agent.env > /dev/null
+      ssh-add
     fi
   fi
   . ~/.ssh/ssh-agent.env > /dev/null
