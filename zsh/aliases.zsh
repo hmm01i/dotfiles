@@ -5,6 +5,6 @@ alias agl="ansible-galaxy"
 alias aglreq="agl install -r requirements.yml"
 
 #for using minikube
-alias mkgo="minikube status && eval $(minikube docker-env)"
+#alias mkgo="minikube status && eval $(minikube docker-env) > /dev/null 2>&1 || echo 'Minikube not running' "
 
 alias mkno="unset DOCKER_TLS_VERIFY;  unset DOCKER_HOST; unset DOCKER_CERT_PATH; unset DOCKER_API_VERSION"
