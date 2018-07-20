@@ -45,13 +45,13 @@ nnoremap <C-=> :nohl<CR>
 
 noremap <C-N> :NERDTreeFind<CR>
 
-let g:UltiSnipsExpandTrigger           = '<tab>'
-let g:UltiSnipsJumpForwardTrigger      = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
+let g:UltiSnipsExpandTrigger           = '<c-k>'
+let g:UltiSnipsJumpForwardTrigger      = '<c-k>'
+let g:UltiSnipsJumpBackwardTrigger     = '<c-j>'
 let g:UltiSnipsSnippetDirectories      = ['~/.vim/UltiSnips', 'UltiSnips']
 
-let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+let g:ycm_key_list_select_completion   = ['<tab>', '<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<S-tab>', '<C-p>', '<Up>']
 
 
 " Backspace behaviour in vim
