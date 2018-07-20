@@ -59,6 +59,7 @@ export PATH="${HOME}/.local/bin:${HOME}/bin:${HOME}/.local/bin:${PATH}:/usr/loca
 
 source $ZSH/oh-my-zsh.sh
 
+export USE_SSH_AGENT=true
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
