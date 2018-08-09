@@ -45,7 +45,6 @@ def copy_defaults():
                             logging.info('Directory Exists')
                     else:
                         try:
-                            logging.debug("Trying to copy resource")
                             logging.debug("shutil.copy({},'{}{}'".format(keep,dest,l))
                             shutil.copy(keep,'{}/{}'.format(dest,l))
                             logging.info("Successfully copied {}".format(keep))
