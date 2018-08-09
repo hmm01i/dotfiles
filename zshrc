@@ -57,9 +57,12 @@ plugins=(git fasd kubectl docker)
 export PATH="${HOME}/.local/bin:${HOME}/bin:${HOME}/.local/bin:${PATH}:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+
+#needs to be set before ssh-agent.zsh is sourced by oh-my-zsh.sh
+export USE_SSH_AGENT=true
+
 source $ZSH/oh-my-zsh.sh
 
-export USE_SSH_AGENT=true
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
