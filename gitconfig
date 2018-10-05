@@ -33,3 +33,4 @@
 	program = gpg2
 [include]
         path = .gitconfig.user
+        path = .gitconfig.custom
