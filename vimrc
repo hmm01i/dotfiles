@@ -57,7 +57,7 @@ let g:ycm_key_list_previous_completion = ['<S-tab>', '<C-p>', '<Up>']
 " Backspace behaviour in vim
 " to make it work like "other" programs
 "
-"set backspace=indent,eol,start
+set backspace=indent,eol,start
 "
 
 "Longer answer
