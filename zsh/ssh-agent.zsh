@@ -1,9 +1,9 @@
 #!/bin/bash -x
 #echo "ssh-agent.zsh running"
 if [ "$USE_SSH_AGENT" = "true" ]; then
-  echo "USE_SSH_AGENT = true"
+#  echo "USE_SSH_AGENT = true"
   if [[ -f ~/.ssh/ssh-agent.env ]]; then
-   echo "ssh-agent.env is a file. sourcing it."
+#   echo "ssh-agent.env is a file. sourcing it."
     . ~/.ssh/ssh-agent.env > /dev/null
   fi
 #  echo "checking for ssh-agent process. what if the pid exists but it's not ssh-agent."
