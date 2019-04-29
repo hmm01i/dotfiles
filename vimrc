@@ -53,6 +53,8 @@ let g:UltiSnipsSnippetDirectories      = ['~/.vim/UltiSnips', 'UltiSnips']
 let g:ycm_key_list_select_completion   = ['<tab>', '<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<S-tab>', '<C-p>', '<Up>']
 
+" Automatically strip whitespace from the end of lines
+autocmd BufWritePre * :%s/\s\+$//e
 
 " Backspace behaviour in vim
 " to make it work like "other" programs
