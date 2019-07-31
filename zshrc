@@ -42,6 +42,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="%d/%m/%y %T"
 
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=${HOME}/dotfiles/zsh
