@@ -1,6 +1,8 @@
 #!/bin/bash -x
 #echo "ssh-agent.zsh running"
-if [ "$USE_SSH_AGENT" = "true" ]; then
+if [ "$USE_SSH_AGENT" != "true" ]; then
+  exit
+fi
 #  echo "USE_SSH_AGENT = true"
   if [[ -f ~/.ssh/ssh-agent.env ]]; then
 #   echo "ssh-agent.env is a file. sourcing it."
@@ -14,7 +16,9 @@ if [ "$USE_SSH_AGENT" = "true" ]; then
     . ~/.ssh/ssh-agent.env > /dev/null
   fi
   # check if default ssh key already loaded
-  if ! ssh-add -l | grep $HOME/.ssh/id_rsa > /dev/null; then
+  ssh-add -T $HOME/.ssh/id_rsa > /dev/null
+  RTN=$?
+  if [[ $RTN -ne 0 ]]; then
     ssh-add
   fi
-fi
+
