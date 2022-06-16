@@ -30,14 +30,6 @@ grep -n --color=always '\ $' ${git_root}/${changedfile}
   fi
 done
 
-if [ -e ~/.puppet-git-hooks/pre-commit ]; then
-~/.puppet-git-hooks/pre-commit
-RC=$?
-if [ "$RC" -ne 0 ]; then
-    failed=`expr $failed + 1`
-  fi
-fi
-
 if [ "$failed" -ne 0 ]; then
     echo -e "$(tput setaf 1)Error: Hooks failed. Aborting commit.$(tput sgr0)"
     exit 1
