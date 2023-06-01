@@ -12,3 +12,4 @@
         ~/.zshrc: zshrc
         ~/.ansible.cfg: ansible.cfg
         ~/.tmux.conf: tmux.conf
+        ~/.openai: openai
