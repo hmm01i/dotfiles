@@ -90,6 +90,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval "$(direnv hook zsh)"
 
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /home/jacob/programs/node-v18.15.0-linux-x64/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/jacob/programs/node-v18.15.0-linux-x64/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
+export PATH="$PATH:/opt/Homebrew/bin"
