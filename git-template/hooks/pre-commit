@@ -4,7 +4,7 @@ git_root=`git rev-parse --show-toplevel`
 refname=$(git rev-parse --abbrev-ref HEAD)
 
 # space separated list of locked branches
-locked="master default production preproduction"
+locked="master main default production preproduction"
 
 for b in $locked; do
   if [[ "$refname" = "$b" ]]
