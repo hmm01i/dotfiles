@@ -1,3 +1,5 @@
+export PATH="$PATH:/opt/Homebrew/bin"
+
 # Path to your oh-my-zsh installation.
 # export ZSH=/home/jacob/.oh-my-zsh
 export ZSH=${HOME}/dotfiles/oh-my-zsh
@@ -90,4 +92,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval "$(direnv hook zsh)"
 
-export PATH="$PATH:/opt/Homebrew/bin"
+

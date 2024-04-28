@@ -3,11 +3,9 @@ if has('python3')
 	  silent! python3 1
 endif
 
-execute pathogen#infect()
 syntax on
 filetype plugin indent on
 set background=light
-colorscheme solarized
 
 " Tabbing
 set tabstop=8
